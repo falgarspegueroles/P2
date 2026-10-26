@@ -94,12 +94,12 @@ VAD_STATE vad(VAD_DATA *vad_data, float *x, float llindar) {
     break;
 
   case ST_SILENCE:
-    if (f.p > vad_data->potencia_soroll + llindar )
+    if (f.p > vad_data -> potencia_soroll + llindar)
       vad_data->state = ST_VOICE;
     break;
 
   case ST_VOICE:
-    if (f.p < vad_data->potencia_soroll + llindar )
+    if (f.p < vad_data -> potencia_soroll + llindar)
       vad_data->state = ST_SILENCE;
     break;
 
